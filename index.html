@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123c3c">
+<meta name="description" content="12の質問に答えて、思考・行動とモチベーションの傾向を図で確認。名前の入力は不要で、回答は保存されません。Anaxis Ltd.">
+<title>思考行動パターン・セルフチェック | Anaxis Ltd.</title>
+<link rel="stylesheet" href="./style.css"><script type="module" src="./app.js"></script>
+</head>
+<body>
+<header class="site-header"><a href="./" class="wordmark" aria-label="Anaxis トップ">Anaxis<span>Ltd.</span></a><span class="header-note">自分を知る、小さなきっかけ。</span></header>
+<main id="main">
+<section id="intro" class="intro" aria-labelledby="intro-title">
+ <div class="intro-copy"><p class="eyebrow">THINKING &amp; BEHAVIOR</p><h1 id="intro-title">自分の「らしさ」を、<br>ちょっと見つめる。</h1><p class="intro-sub">思考行動パターン・セルフチェック</p><p class="intro-desc">どんなことを大切にして、何に心が動くのか。<br class="desktop">12の質問から、いまのあなたの傾向を見てみましょう。</p>
+ <div class="meta"><span><b>12</b> 問</span><span>目安 <b>3〜5</b> 分</span><span>名前入力不要</span></div>
+ <button id="start" class="button primary">セルフチェックをはじめる <span aria-hidden="true">↗</span></button>
+ <p class="privacy-mini"><span aria-hidden="true">◈</span> 回答は送信・保存されません。</p></div>
+ <div class="intro-art" aria-hidden="true"><div class="art-tag">SELF REFLECTION</div><svg viewBox="0 0 440 440"><defs><pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#bdd0c6"/></pattern></defs><rect width="440" height="440" fill="url(#dots)"/><circle cx="220" cy="220" r="162" fill="#e6eee5"/><path d="M220 48V392M48 220H392" stroke="#9db5ab" stroke-width="1"/><path d="M220 76L364 220L220 364L76 220Z M220 124L316 220L220 316L124 220Z M220 172L268 220L220 268L172 220Z" fill="none" stroke="#b3c7bb"/><path d="M220 100L336 220L220 304L142 220Z" fill="#397e6c" fill-opacity=".15" stroke="#2d6b5b" stroke-width="2"/><circle cx="220" cy="100" r="9" fill="#2d6b5b"/><circle cx="336" cy="220" r="9" fill="#2d6b5b"/><circle cx="220" cy="304" r="9" fill="#2d6b5b"/><circle cx="142" cy="220" r="9" fill="#2d6b5b"/><circle cx="220" cy="220" r="26" fill="#f7ca6e"/><path d="M212 220h16M220 212v16" stroke="#123c3c" stroke-width="1.5"/></svg><span class="art-caption">考え方と行動の、その輪郭。</span></div>
+ <div class="intro-bottom"><div><span class="small-index">01</span><h2>直感で、2つ選ぶ</h2><p>各問で「最も近い」と「次に近い」を1つずつ。迷う場合も、あえて選んでみてください。</p></div><div><span class="small-index">02</span><h2>傾向を、図で見る</h2><p>4つの欲求の強弱と、モチベーションが変わりやすいきっかけを確認できます。</p></div><div><span class="small-index">03</span><h2>自分の経験と、照らす</h2><p>正解・不正解はありません。日々の自分を振り返る材料としてご利用ください。</p></div></div>
+</section>
+<section id="quiz" class="quiz" hidden aria-labelledby="question-title">
+ <div class="quiz-top"><span class="eyebrow">SELF CHECK</span><span id="completion" aria-live="polite"></span></div><div class="progress-track"><div id="progress-fill"></div></div>
+ <div class="question-head"><p id="question-number" class="question-number"></p><h1 id="question-title" tabindex="-1"></h1><p>あまり考え込まず、普段の自分に近いものを選んでください。</p></div>
+ <div class="choice-legend"><span>異なる2つを選択</span><span>◎ 最も近い</span><span>○ 次に近い</span></div>
+ <div id="options" class="options"></div>
+ <div class="selection-status"><p id="selection-status" aria-live="polite"></p><button id="clear-question" class="text-button">この問を選び直す</button></div>
+ <div class="quiz-actions"><button id="previous" class="button secondary">← 前の質問</button><button id="next" class="button primary">次の質問 →</button></div>
+ <nav id="question-nav" class="question-nav" aria-label="質問の移動"></nav><p class="quiz-privacy">回答はこの画面内だけで使用します。再読み込みすると消去されます。</p>
+</section>
+<section id="results" class="results" hidden aria-labelledby="results-title">
+ <div class="results-heading"><div><p class="eyebrow">YOUR PATTERN</p><h1 id="results-title" tabindex="-1">いまのあなたの傾向</h1><p>4つの欲求がつくる、思考と行動の輪郭。</p></div><span class="done-badge">12問 回答完了</span></div>
+ <div class="result-grid"><div class="chart-card"><div class="card-caption"><span>4つの欲求のバランス</span><span>各軸 0〜24点</span></div><div id="chart"></div><p class="chart-note">点が外側にあるほど、今回の回答で強く表れた欲求です。</p></div><div class="summary-card"><p class="eyebrow">今回、強く表れたのは</p><h2 id="leading-title"></h2><p id="leading-description"></p><div id="score-list" class="score-list"></div><p class="score-note">得点は能力や優劣を表すものではありません。</p></div></div>
+ <div class="interpretation"><span aria-hidden="true">↳</span><p><strong>「あなたは○○タイプ」と決めつけるものではありません。</strong><br>誰もが4つの欲求を持っています。場面や時期によって表れ方は変わります。低い得点も、その欲求がないことを意味しません。</p></div>
+ <div class="section-heading"><p class="eyebrow">MOTIVATION GUIDE</p><h2>心が動くきっかけを知る</h2><p>得点の高低とあわせて、実際の自分の経験と照らしてみてください。</p></div>
+ <div id="motivation-cards" class="motivation-grid"></div>
+ <div class="reflection"><p class="eyebrow">FOR YOUR NEXT STEP</p><h2>最近、意欲が上がったのは、どんなとき？</h2><p>その場面に、どの欲求が関わっていたでしょうか。<br>次に仕事へ取り組むとき、その条件を1つつくってみましょう。</p></div>
+ <details class="method"><summary>採点方法と結果の読み方</summary><p>各問の上から順に「達成支配欲求」「アナライズ欲求」「貢献奉仕欲求」「クリエイティブ欲求」に対応しています。「最も近い」を2点、「次に近い」を1点として12問分を合計します。総得点は36点、各欲求は0〜24点です。</p><p>同点の場合は、該当する欲求をすべて併記します。得点はこの回答の中での傾向であり、他の人との比較や、能力の判定には用いません。</p><p>元資料「思考行動パターンアンケート」「思考行動パターンアンケートの見方」に基づいています。図の目盛りは採点方法に合わせて24点にしています。</p></details>
+ <div class="result-actions"><button id="review" class="button secondary">回答を見直す</button><button id="restart" class="button primary">回答を消して最初から ↗</button></div><p class="quiz-privacy">回答・結果は送信・保存されません。画面を閉じるか再読み込みすると消去されます。</p>
+</section>
+</main><footer><span>思考行動パターン・セルフチェック</span><small>Copyright © Anaxis Ltd.</small></footer>
+</body></html>
