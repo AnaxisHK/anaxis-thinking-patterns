@@ -8,15 +8,16 @@ Anaxis Ltd. の12問のセルフチェックを、GitHub Pagesで公開するた
 `anaxis-thinking-patterns-github.zip` を解凍してください。
 中の `anaxis-thinking-patterns` フォルダーを開いてください。
 
-公開に必要なファイルは、次の4つです。
+公開に必要なファイルは、次の5つです。
 
 - index.html：画面
 - style.css：デザイン
 - app.js：質問の表示・画面の切り替え・結果の図解
 - core.js：12問の質問・選択肢・採点処理
+- anaxis-logo.png：Anaxisロゴ（ヘッダーに表示）
 
 このREADME.mdは公開手順です。GitHubへ一緒にアップロードして構いません。
-`.nojekyll` はGitHub側の自動変換を無効にする補助ファイルです。隠しファイルとして見えなくても、今回の4ファイルはそのまま公開できます。
+`.nojekyll` はGitHub側の自動変換を無効にする補助ファイルです。隠しファイルとして見えなくても、今回の5ファイルはそのまま公開できます。
 
 ## 2．GitHubで新しいリポジトリを作る
 
@@ -31,7 +32,7 @@ Anaxis Ltd. の12問のセルフチェックを、GitHub Pagesで公開するた
 
 1. 作成直後の画面で **uploading an existing file** を押します。
    既にファイルがある場合は **Add file → Upload files** を選びます。
-2. 解凍フォルダーの中にある `index.html`、`style.css`、`app.js`、`core.js` の4ファイルを、まとめてドラッグします。
+2. 解凍フォルダーの中にある `index.html`、`style.css`、`app.js`、`core.js`、`anaxis-logo.png` の5ファイルを、まとめてドラッグします。
    `README.md` も一緒にアップロードできます。
 3. **Commit changes** を押します。確認画面が出たら、変更を確定します。
 4. リポジトリの最初の階層に `index.html` が並んでいることを確認します。
